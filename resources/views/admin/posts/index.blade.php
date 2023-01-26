@@ -29,13 +29,15 @@
             <td>{{$post->content}}</td>
             <td>{{$post->slug}}</td>
             <td>
-              <a href="{{route('admin.posts.show', $post)}}" class="btn btn-primary my-1">Info</a>
-              <a href="{{route('admin.posts.edit', $post)}}" class="btn btn-warning my-1">Modifica</a>
-              
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-{{$post->id}}">
-                Elimina
-              </button>
+              <div class="d-flex align-items-center">
+                <a href="{{route('admin.posts.show', $post)}}" class="btn btn-primary my-1 d-inline-block mx-1 main-post-button"><i class="fa-solid fa-eye"></i></a>
+                <a href="{{route('admin.posts.edit', $post)}}" class="btn btn-warning my-1 d-inline-block mx-1 main-post-button"><i class="fa-solid fa-pen"></i></a>
+                
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger d-inline-block mx-1 main-post-button" data-bs-toggle="modal" data-bs-target="#modal-{{$post->id}}">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
             </td>
           </tr>
 

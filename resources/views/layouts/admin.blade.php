@@ -98,7 +98,7 @@
                       class="nav-link text-white {{ Route::currentRouteName() == 'admin.posts.index' ? 'bg-secondary' : '' }}"
                       href="{{route('admin.posts.index')}}"
                     >
-                      <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i>
+                      <i class="fa-solid fa-paperclip fa-lg fa-fw"></i>
                       Controllo Posts
                     </a>
               </ul>
