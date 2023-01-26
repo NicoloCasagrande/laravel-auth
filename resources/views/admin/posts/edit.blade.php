@@ -2,6 +2,15 @@
 
 @section('content')
     <h1>Modifica : {{$post->title}}</h1>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul class="list-unstyled">
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <div>
         <form action="{{route('admin.posts.update', $post)}}" method="POST">
             @csrf
@@ -18,5 +27,5 @@
         </form>
     </div>
     <a href="{{route('admin.posts.index')}}" class="btn btn-primary my-1">Torna alla Lista</a>
-    
+    @extends('errors')
 @endsection

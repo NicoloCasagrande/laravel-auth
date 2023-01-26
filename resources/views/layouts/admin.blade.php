@@ -80,7 +80,7 @@
         <div class="row h-100">
           <nav
             id="sidebarMenu"
-            class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse"
+            class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse position-fixed h-100"
           >
             <div class="position-sticky pt-3">
               <ul class="nav flex-column">
