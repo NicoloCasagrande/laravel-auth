@@ -5,7 +5,7 @@
 
     @if(session('message'))
       <div class="alert alert-success">
-        {{ $value }}
+        {{ session('message') }}
       </div>
     @endif
     <div class="my-4">
@@ -31,7 +31,11 @@
             <td>
               <a href="{{route('admin.posts.show', $post)}}" class="btn btn-primary my-1">Info</a>
               <a href="{{route('admin.posts.edit', $post)}}" class="btn btn-warning my-1">Modifica</a>
-              <a href="" class="btn btn-danger my-1">Elimina</a>
+              <form action="{{route('admin.posts.destroy', $post)}}" method="POST">
+              @csrf
+              @method('DELETE')
+                <button class="btn btn-danger my-1">Elimina</button>
+              </form>
             </td>
           </tr>
           @endforeach

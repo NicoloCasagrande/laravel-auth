@@ -80,7 +80,12 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $old_title = $post->title;
+        $data = $request->validated();
+        $post->slug = Str::slug($data['title']);
+        $post->update($data);
+
+        return redirect()->route('admin.posts.index')->with('message', "Il post $old_title è stato aggiornato");
     }
 
     /**
@@ -91,6 +96,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $old_title = $post->title;
+        $post->delete();
+
+        return redirect()->route('admin.posts.index')->with('message', "Il post $old_title è stato cancellato");
     }
 }
