@@ -12,7 +12,7 @@
 @section('content')
     <h1>{{$post->title}}</h1>
     <p>{{$post->content}}</p>
-    <a href="" class="btn btn-warning my-1 d-inline-block">Modifica</a>
-    <a href="" class="btn btn-danger my-1">Elimina</a>
+    <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-warning my-1 d-inline-block">Modifica</a>
+    <a href="#" class="btn btn-danger my-1">Elimina</a>
     
 @endsection

@@ -7,9 +7,10 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Titolo</th>
+            <th scope="col">Descrizione Progetto</th>
+            <th scope="col">Slug</th>
+            <th scope="col">Azioni</th>
           </tr>
         </thead>
         <tbody>
