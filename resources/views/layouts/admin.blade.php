@@ -99,7 +99,7 @@
                       href="{{route('admin.posts.index')}}"
                     >
                       <i class="fa-solid fa-paperclip fa-lg fa-fw"></i>
-                      Controllo Posts
+                      Posts
                     </a>
               </ul>
             </div>
