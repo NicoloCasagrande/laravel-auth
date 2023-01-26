@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\PostController;
 |
 */
 
+//tutte le rotte pubbliche per i profili Guest
 Route::get('/', function () {
     return view('welcome');
 });
