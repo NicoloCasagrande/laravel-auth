@@ -17,6 +17,9 @@ class PostSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+
+        Post::truncate();
+
         for ($i=0; $i < 10; $i++) { 
             $new_post = new Post();
             $new_post->title = $faker->sentence();
