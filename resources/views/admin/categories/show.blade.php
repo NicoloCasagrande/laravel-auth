@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h1>{{$post->title}}</h1>
+    <h1>{{$category->name}}</h1>
     {{-- Con il punto interrogativo prima del nome della proprietà si intende 'se esiste stampa se no non farlo' --}}
     <h3>{{$post->category?->name ?: 'Nessuna Categoria'}}</h3>
     <p>{{$post->content}}</p>

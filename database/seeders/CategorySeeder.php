@@ -17,7 +17,6 @@ class CategorySeeder extends Seeder
     public function run()
     {
 
-        Category::truncate();
         $categories = ['Frontend', 'Backend', 'Devops', 'AI'];
 
         foreach ($categories as $category) {
