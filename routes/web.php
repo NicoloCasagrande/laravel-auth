@@ -28,6 +28,8 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     //collego la risorsa Post alle rotte, cosi che vengano generate da laravel
     Route::resource('posts', PostController::class)->parameters(['posts' => 'post:slug']);
+
+    Route::resource('categories', PostController::class)->parameters(['categories' => 'category:slug']);
 });
 
 //Tutte le rotte per l'autenticazione
