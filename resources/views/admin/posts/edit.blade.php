@@ -23,6 +23,10 @@
                 <label for="content" class="form-label">Descrizione</label>
                 <textarea class="form-control" id="content" name="content" rows="3">{{$post->content, old('content')}}</textarea>
               </div>
+              <div class="mb-3">
+                <label for="cover_image" class="form-label">Immagine</label>
+                <input type="file" class="form-control" id="cover_image" name="cover_image" value="{{old('cover_image')}}">
+              </div>
               <button type="submit" class="btn btn-success">Conferma</button>
         </form>
     </div>
