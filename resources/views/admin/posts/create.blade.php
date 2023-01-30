@@ -12,7 +12,7 @@
       </div>
     @endif
     <div>
-        <form action="{{route('admin.posts.store')}}" method="POST">
+        <form action="{{route('admin.posts.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
@@ -20,11 +20,15 @@
               </div>
               <div class="mb-3">
                 <label for="content" class="form-label">Descrizione</label>
-                <textarea class="form-control" id="content" name="content" rows="3" placeholder="Inserisci la descrizione del progetto"></textarea>
+                <textarea class="form-control" id="content" name="content" rows="3" placeholder="Inserisci la descrizione del progetto">{{old('content')}}</textarea>
+              </div>
+              <div class="mb-3">
+                <label for="cover_image" class="form-label">Immagine</label>
+                <input type="file" class="form-control" id="cover_image" name="cover_image" value="{{old('cover_image')}}>
               </div>
               <button type="submit" class="btn btn-success">Conferma</button>
         </form>
     </div>
-    <a href="{{route('admin.posts.index')}}" class="btn btn-primary my-1">Torna alla Lista</a>
+    <a href="{{route('admin.posts.index')}}" class="btn btn-primary my-4">Torna alla Lista</a>
     @extends('errors')
 @endsection

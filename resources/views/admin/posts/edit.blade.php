@@ -12,7 +12,7 @@
     </div>
     @endif
     <div>
-        <form action="{{route('admin.posts.update', $post)}}" method="POST">
+        <form action="{{route('admin.posts.update', $post)}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="mb-3">
@@ -26,6 +26,6 @@
               <button type="submit" class="btn btn-success">Conferma</button>
         </form>
     </div>
-    <a href="{{route('admin.posts.index')}}" class="btn btn-primary my-1">Torna alla Lista</a>
+    <a href="{{route('admin.posts.index')}}" class="btn btn-primary my-4">Torna alla Lista</a>
     @extends('errors')
 @endsection
